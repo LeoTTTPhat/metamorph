@@ -1,0 +1,41 @@
+{
+  "dataset": "msmarco",
+  "pair": "minilm-e5",
+  "scale": "xxl",
+  "seed": 42,
+  "sizes": [
+    4000000
+  ],
+  "seeds": [
+    42
+  ],
+  "methods": [
+    "metamorph",
+    "random_order",
+    "popularity_prior"
+  ],
+  "argv": [
+    "experiments/exp9_scale_ladder.py",
+    "--dataset",
+    "msmarco",
+    "--pair",
+    "minilm-e5",
+    "--scale",
+    "xxl",
+    "--sizes",
+    "4000000",
+    "--seeds",
+    "42",
+    "--eval-queries",
+    "150",
+    "--max-queries",
+    "4000",
+    "--tag",
+    "b"
+  ],
+  "written_at": "2026-08-23 16:15:27",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 93
+}

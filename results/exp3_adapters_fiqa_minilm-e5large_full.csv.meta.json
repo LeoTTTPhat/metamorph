@@ -1,0 +1,38 @@
+{
+  "dataset": "fiqa",
+  "pair": "minilm-e5large",
+  "scale": "full",
+  "seed": 42,
+  "n_docs": 57638,
+  "n_queries": 648,
+  "d_old": 384,
+  "d_new": 1024,
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "new_model": "intfloat/e5-large-v2",
+  "endpoints": {
+    "old": {
+      "recall@10_vs_dest": 0.2993827160493827,
+      "ndcg@10": 0.3616451856537687,
+      "mrr@10": 0.42800436018028604
+    },
+    "new": {
+      "recall@10_vs_dest": 1.0,
+      "ndcg@10": 0.3979675155999427,
+      "mrr@10": 0.47838036449147564
+    }
+  },
+  "argv": [
+    "experiments/exp3_adapter_ablation.py",
+    "--dataset",
+    "fiqa",
+    "--pair",
+    "minilm-e5large",
+    "--scale",
+    "full"
+  ],
+  "written_at": "2026-08-25 18:58:52",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 20
+}

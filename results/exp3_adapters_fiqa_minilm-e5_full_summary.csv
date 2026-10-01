@@ -1,0 +1,7 @@
+kind,query_mode,runtime_s,budget_to_95pct_dest_recall,budget_to_99pct_dest_recall,certified_at_frac,final_recall_vs_dest,dataset,pair,scale,seed,n_docs
+procrustes,dual,66.89,0.9324924528956591,,1.0,0.975,fiqa,minilm-e5,full,42,57638
+procrustes,new_only,108.18,0.9905791318227558,,1.0,0.9705000000000001,fiqa,minilm-e5,full,42,57638
+ridge,dual,67.97,0.9066241021548284,,1.0,0.9710000000000001,fiqa,minilm-e5,full,42,57638
+ridge,new_only,73.38,0.9062944585169507,,0.923002186057809,0.972,fiqa,minilm-e5,full,42,57638
+mlp,dual,152.84,0.9061730108608904,,1.0,0.9735,fiqa,minilm-e5,full,42,57638
+mlp,new_only,182.44,0.9076130330684617,,1.0,0.9715,fiqa,minilm-e5,full,42,57638

@@ -1,0 +1,46 @@
+{
+  "experiment": "exp10 Drift-Adapter faithful reproduction + factor analysis",
+  "argv": {
+    "settings": [
+      "emotion:minilm:mpnet",
+      "agnews:minilm:mpnet",
+      "dbpedia14:minilm:mpnet"
+    ],
+    "np": [
+      20000
+    ],
+    "runs": 3,
+    "adapters": [
+      "LA",
+      "MLP"
+    ],
+    "directions": [
+      "query->old"
+    ],
+    "tag": "grid",
+    "recipe": "grid"
+  },
+  "runtime_s": 2792.1,
+  "protocol_stated": {
+    "direction": "new query -> old space, old index unchanged",
+    "adapters": {
+      "OP": "closed form, all pairs, no DSM",
+      "LA": "rank 64 + bias + DSM",
+      "MLP": "1 hidden layer 256, GELU, dropout 0.1, residual, DSM"
+    },
+    "training": "MSE; AdamW lr 3e-4 wd 0.01 batch 256 <=50 epochs; early stop patience 5 on val MSE; 80/20 split",
+    "pairs": "Np=20,000 random database docs; 5 runs, fresh sample each",
+    "index": "FAISS HNSW M=32 efC=200 efS=50",
+    "truth": "exhaustive new-model kNN (k=10)",
+    "metrics": "Recall@10, MRR, ARR = system / re-embedded system"
+  },
+  "our_choices_not_stated": {
+    "dim_mismatch": "rectangular Procrustes R=UV^T; MLP skip = fixed R",
+    "mrr": "MRR@10 of the true nearest neighbour",
+    "dsm_init": "ones",
+    "checkpoint": "best validation",
+    "database": "full training split where 1M exceeds it"
+  },
+  "faiss": "1.15.0",
+  "generated_at": "2026-09-27 10:19:28"
+}

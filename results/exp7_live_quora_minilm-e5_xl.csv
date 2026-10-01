@@ -1,0 +1,3 @@
+method,wall_s,encode_s,index_s,eval_harness_s,system_s,other_s,budget_frac_at_stop,quality_at_stop,encode_seconds,encode_calls,encode_docs,encode_docs_per_s,encode_chars_per_doc,device,max_oracle_cosine_gap,n_docs,dataset,pair,scale,seed
+metamorph,327.0674379589909,117.798,,67.40359828798682,259.6638396710041,141.8658396710041,1.0,0.9188085304510837,117.798,411,200000,1697.8165347021963,70.78122,mps,0.0,200000,quora,minilm-e5,xl,42
+full_swap,111.19275779198506,78.31932783400407,25.525517583009787,0.0,111.19275874999585,7.347912624973105,1.0,1.0,78.319,1,200000,2553.648065314033,70.78122,mps,5.960464477539063e-08,200000,quora,minilm-e5,xl,42

@@ -1,0 +1,29 @@
+[project]
+name = "metamorph"
+version = "0.1.0"
+description = "Online embedding model migration as a first-class vector database operation"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "pandas",
+    "hnswlib",
+]
+
+[project.optional-dependencies]
+models = ["torch", "sentence-transformers"]
+experiments = ["faiss-cpu", "matplotlib", "pyarrow"]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["metamorph"]
+
+[tool.pytest.ini_options]
+testpaths = ["src/tests"]
+addopts = "-q"

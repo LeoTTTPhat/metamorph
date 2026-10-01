@@ -1,0 +1,2 @@
+n_steps,n_decreasing,frac_decreasing,worst_decrease,mean_decrease_when_negative,runtime_s,dataset,pair,scale,seed,n_docs
+31,0,0.0,0.0,0.0,7.5,scifact,minilm-e5,small,42,5183

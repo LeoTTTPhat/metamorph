@@ -1,0 +1,2 @@
+graph_k,iters,cold_final_recall,cold_dist_comps,warm_final_recall,warm_dist_comps,old_graph_seconds_uncharged,cold_seconds,warm_seconds,cold_comps@0.7,warm_comps@0.7,speedup@0.7,cold_comps@0.8,warm_comps@0.8,speedup@0.8,cold_comps@0.85,warm_comps@0.85,speedup@0.85,cold_comps@0.9,warm_comps@0.9,speedup@0.9,cold_comps@0.5874,warm_comps@0.5874,speedup@0.5874,dataset,pair,scale,seed,n_docs
+10,16,0.5874,93534142,0.7768,79907749,26.28,71.14,64.75,,12958361.106761565,,,,,,,,,,,93534142.0,7142416.543130993,13.095587667727624,fiqa,minilm-e5,full,42,57638

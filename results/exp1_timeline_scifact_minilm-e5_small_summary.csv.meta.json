@@ -1,0 +1,110 @@
+{
+  "dataset": "scifact",
+  "pair": "minilm-e5",
+  "scale": "small",
+  "seed": 42,
+  "n_docs": 5183,
+  "n_queries": 300,
+  "d_old": 384,
+  "d_new": 384,
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "new_model": "intfloat/e5-small-v2",
+  "endpoints": {
+    "42": {
+      "old": {
+        "recall@10_vs_dest": 0.4453333333333332,
+        "ndcg@10": 0.6242422108964475,
+        "mrr@10": 0.5828015873015874
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.6458467329271862,
+        "mrr@10": 0.6141190476190476
+      }
+    },
+    "43": {
+      "old": {
+        "recall@10_vs_dest": 0.43933333333333335,
+        "ndcg@10": 0.6127754823427108,
+        "mrr@10": 0.5776640211640212
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.6586334292110666,
+        "mrr@10": 0.631089947089947
+      }
+    },
+    "44": {
+      "old": {
+        "recall@10_vs_dest": 0.44066666666666665,
+        "ndcg@10": 0.6064526457664292,
+        "mrr@10": 0.5638042328042328
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.6270064704382716,
+        "mrr@10": 0.5846349206349206
+      }
+    },
+    "45": {
+      "old": {
+        "recall@10_vs_dest": 0.4266666666666667,
+        "ndcg@10": 0.6501408606115502,
+        "mrr@10": 0.607931216931217
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.6934854840569481,
+        "mrr@10": 0.655126984126984
+      }
+    },
+    "46": {
+      "old": {
+        "recall@10_vs_dest": 0.42866666666666675,
+        "ndcg@10": 0.6382093940252767,
+        "mrr@10": 0.5966296296296296
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.6851618473369653,
+        "mrr@10": 0.6582301587301587
+      }
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "engine_config": "EngineConfig(seed=42, seed_fraction=0.02, batch_size=100, n_partitions=16, workload_per_step=32, max_budget_fraction=1.0, eval_every_steps=2, hnsw_M=16, hnsw_ef_construction=200, compact_old_index_ratio=0.5, adapter=AdapterConfig(kinds=('procrustes', 'ridge', 'mlp'), primary='auto', ridge_lambda=1.0, mlp_hidden=512, mlp_epochs=60, mlp_lr=0.001, mlp_batch=128, train_reverse=True), scheduler=SchedulerConfig(w_traffic=1.0, w_hardness=0.5, w_disagreement=1.0, w_base=0.05, decay=0.99, anneal_disagreement=True, partition_major=False, cert_boost=1.0), certifier=CertifierConfig(enabled=True, sample_queries=100, pool_extra=20, delta=0.05, target_recall=0.9, period_steps=4, min_budget_frac=0.1, max_round_cost_frac=0.012, history_window=0, recycle=True, bound='betting', metric='recall', probe_frac=1.0, probe_multiplier=2, suffix_bound=True, min_probe=30), serve=ServeConfig(k=10, overfetch=4, query_mode='dual', verify_per_query=0, ef_search=128, eps_quantile=0.95))",
+  "verify_per_query": 0,
+  "argv": [
+    "experiments/exp1_migration_timeline.py",
+    "--dataset",
+    "scifact",
+    "--pair",
+    "minilm-e5",
+    "--scale",
+    "small",
+    "--methods",
+    "full_swap",
+    "random_order",
+    "static_adapter",
+    "popularity_prior",
+    "oracle_traffic",
+    "metamorph",
+    "--seeds",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46"
+  ],
+  "written_at": "2026-08-23 11:41:45",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 30
+}

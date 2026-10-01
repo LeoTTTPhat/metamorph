@@ -1,0 +1,45 @@
+{
+  "dataset": "quora",
+  "pair": "minilm-e5",
+  "scale": "xl",
+  "seed": 42,
+  "sizes": [
+    250000,
+    522931
+  ],
+  "seeds": [
+    43,
+    44
+  ],
+  "methods": [
+    "metamorph",
+    "random_order",
+    "popularity_prior"
+  ],
+  "argv": [
+    "experiments/exp9_scale_ladder.py",
+    "--dataset",
+    "quora",
+    "--pair",
+    "minilm-e5",
+    "--scale",
+    "xl",
+    "--sizes",
+    "250000",
+    "522931",
+    "--seeds",
+    "43",
+    "44",
+    "--eval-queries",
+    "200",
+    "--max-queries",
+    "4000",
+    "--tag",
+    "b2"
+  ],
+  "written_at": "2026-08-24 16:51:35",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 12
+}

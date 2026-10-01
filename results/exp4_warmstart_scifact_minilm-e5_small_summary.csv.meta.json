@@ -1,0 +1,28 @@
+{
+  "dataset": "scifact",
+  "pair": "minilm-e5",
+  "scale": "small",
+  "seed": 42,
+  "n_docs": 5183,
+  "n_queries": 300,
+  "d_old": 384,
+  "d_new": 384,
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "new_model": "intfloat/e5-small-v2",
+  "graph_k": 10,
+  "kmeans_k": 71,
+  "argv": [
+    "experiments/exp4_warmstart_index.py",
+    "--dataset",
+    "scifact",
+    "--pair",
+    "minilm-e5",
+    "--scale",
+    "small"
+  ],
+  "written_at": "2026-08-23 01:23:30",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 1
+}

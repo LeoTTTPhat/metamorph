@@ -1,0 +1,7 @@
+kind,query_mode,runtime_s,budget_to_95pct_dest_recall,budget_to_99pct_dest_recall,certified_at_frac,final_recall_vs_dest,dataset,pair,scale,seed,n_docs
+procrustes,dual,25.48,0.9509936330310631,1.0,,0.9979999999999999,scifact,minilm-e5base,small,42,5183
+procrustes,new_only,25.14,1.0,1.0,,0.9993333333333334,scifact,minilm-e5base,small,42,5183
+ridge,dual,23.43,0.9538877098205673,1.0,,0.9973333333333333,scifact,minilm-e5base,small,42,5183
+ridge,new_only,23.76,0.9515724483889639,1.0,,0.9986666666666667,scifact,minilm-e5base,small,42,5183
+mlp,dual,88.76,0.956974725062705,1.0,,0.9986666666666667,scifact,minilm-e5base,small,42,5183
+mlp,new_only,127.7,0.9616052479259116,1.0,,0.9993333333333334,scifact,minilm-e5base,small,42,5183

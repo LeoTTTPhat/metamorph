@@ -1,0 +1,3 @@
+n_docs,method,seed,wl_agree@25,wl_agree@50,heldout_agree@50,budget_to_95pct_dest_ndcg,budget_to_95pct_wl_agreement,certified_at_frac,hot_set_frac,final_recall@10_vs_dest,dest_ndcg,compact_count,runtime_s,dataset,pair,scale
+8841823,metamorph,42,0.539519288856841,0.6859530915439601,0.5565728497545871,,,,0.019326218133975313,0.6960000000000001,0.42975642578035245,6,2209.8,msmarco,minilm-e5,xxl
+8841823,random_order,42,0.490199689204962,0.5973994140359924,0.5701326940998706,,,,0.019326218133975313,0.7486666666666667,0.42975642578035245,6,2175.5,msmarco,minilm-e5,xxl

@@ -1,0 +1,81 @@
+{
+  "dataset": "fiqa",
+  "pair": "minilm-gte",
+  "scale": "full",
+  "seed": 42,
+  "n_docs": 57638,
+  "n_queries": 648,
+  "d_old": 384,
+  "d_new": 384,
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "new_model": "thenlper/gte-small",
+  "endpoints": {
+    "42": {
+      "old": {
+        "recall@10_vs_dest": 0.44413580246913575,
+        "ndcg@10": 0.3616451856537687,
+        "mrr@10": 0.42800436018028604
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.39926083534047974,
+        "mrr@10": 0.46786571624534595
+      }
+    },
+    "43": {
+      "old": {
+        "recall@10_vs_dest": 0.4435185185185185,
+        "ndcg@10": 0.3391307325035771,
+        "mrr@10": 0.40084509112286887
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.36997621434926353,
+        "mrr@10": 0.4364920145012738
+      }
+    },
+    "44": {
+      "old": {
+        "recall@10_vs_dest": 0.44197530864197526,
+        "ndcg@10": 0.3566494645459901,
+        "mrr@10": 0.43156476582402514
+      },
+      "new": {
+        "recall@10_vs_dest": 1.0,
+        "ndcg@10": 0.3813713363594649,
+        "mrr@10": 0.47107338820301786
+      }
+    }
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "engine_config": "EngineConfig(seed=42, seed_fraction=0.02, batch_size=500, n_partitions=32, workload_per_step=32, max_budget_fraction=1.0, eval_every_steps=2, hnsw_M=16, hnsw_ef_construction=200, compact_old_index_ratio=0.5, adapter=AdapterConfig(kinds=('procrustes', 'ridge', 'mlp'), primary='auto', ridge_lambda=1.0, mlp_hidden=512, mlp_epochs=60, mlp_lr=0.001, mlp_batch=128, train_reverse=True), scheduler=SchedulerConfig(w_traffic=1.0, w_hardness=0.5, w_disagreement=1.0, w_base=0.05, decay=0.99, anneal_disagreement=True, partition_major=False, cert_boost=1.0), certifier=CertifierConfig(enabled=True, sample_queries=150, pool_extra=30, delta=0.05, target_recall=0.9, period_steps=5, min_budget_frac=0.1, max_round_cost_frac=0.008, history_window=0, recycle=True, bound='betting', metric='recall', probe_frac=1.0, probe_multiplier=2, suffix_bound=True, min_probe=30), serve=ServeConfig(k=10, overfetch=4, query_mode='dual', verify_per_query=0, ef_search=128, eps_quantile=0.95))",
+  "verify_per_query": 0,
+  "argv": [
+    "experiments/exp1_migration_timeline.py",
+    "--dataset",
+    "fiqa",
+    "--pair",
+    "minilm-gte",
+    "--scale",
+    "full",
+    "--methods",
+    "full_swap",
+    "random_order",
+    "static_adapter",
+    "popularity_prior",
+    "metamorph",
+    "--seeds",
+    "42",
+    "43",
+    "44"
+  ],
+  "written_at": "2026-08-23 12:19:39",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 15
+}

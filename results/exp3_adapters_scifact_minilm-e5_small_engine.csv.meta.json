@@ -1,0 +1,38 @@
+{
+  "dataset": "scifact",
+  "pair": "minilm-e5",
+  "scale": "small",
+  "seed": 42,
+  "n_docs": 5183,
+  "n_queries": 300,
+  "d_old": 384,
+  "d_new": 384,
+  "old_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "new_model": "intfloat/e5-small-v2",
+  "endpoints": {
+    "old": {
+      "recall@10_vs_dest": 0.4453333333333332,
+      "ndcg@10": 0.6242422108964475,
+      "mrr@10": 0.5828015873015874
+    },
+    "new": {
+      "recall@10_vs_dest": 1.0,
+      "ndcg@10": 0.6458467329271862,
+      "mrr@10": 0.6141190476190476
+    }
+  },
+  "argv": [
+    "experiments/exp3_adapter_ablation.py",
+    "--dataset",
+    "scifact",
+    "--pair",
+    "minilm-e5",
+    "--scale",
+    "small"
+  ],
+  "written_at": "2026-08-23 01:23:21",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "git_rev": "n/a",
+  "n_rows": 156
+}

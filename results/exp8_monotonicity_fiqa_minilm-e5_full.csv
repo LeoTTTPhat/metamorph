@@ -1,0 +1,2 @@
+n_steps,n_decreasing,frac_decreasing,worst_decrease,mean_decrease_when_negative,runtime_s,dataset,pair,scale,seed,n_docs
+64,6,0.09375,-0.015000000000000069,-0.010000000000000064,25.31,fiqa,minilm-e5,full,42,57638
